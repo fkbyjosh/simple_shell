@@ -18,5 +18,8 @@ int _mycd(info_t *);
 int _myhelp(info_t *);
 
 
+/* han_builtin.c */
+int _myhistory(info_t *);
+int _myalias(info_t *);
 
 #endif /* SHELL_H */
