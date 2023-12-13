@@ -18,6 +18,22 @@ void exe_command(const char *command);
 void process_input(char *command, size_t size);
 void rmv_newline(char *str);
 
+
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+	0, 0, 0}
+
+/**
+ *struct builtin - contains a builtin string and related function
+ *@type: the builtin command flag
+ *@func: the function
+ */
+typedef struct builtin
+{
+	char *type;
+	int (*func)(info_t *);
+} builtin_table;
+
 /* sig_builtins1.c */
 int _myexit(info_t *);
 int _mycd(info_t *);
