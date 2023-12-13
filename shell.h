@@ -18,6 +18,23 @@ void exe_command(const char *command);
 void process_input(char *command, size_t size);
 void rmv_newline(char *str);
 
+extern char **environ;
+
+
+/**
+ * struct liststr - singly linked list
+ * @num: the number field
+ * @str: a string
+ * @next: points to the next node
+ */
+typedef struct liststr
+{
+	int num;
+	char *str;
+	struct liststr *next;
+} list_t;
+
+
 /**
  *struct passinfo - contains pseudo-arguements to pass into a function,
  *		allowing uniform prototype for function pointer struct
