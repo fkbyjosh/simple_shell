@@ -11,4 +11,5 @@ void constant_prompt(void);
 void _printf(const char *command);
 void exe_command(const char *command);
 void process_input(char *command, size_t size);
+void rmv_newline(char *str);
 #endif /* SHELL_H */

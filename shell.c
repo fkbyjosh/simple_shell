@@ -13,8 +13,8 @@ int main(void)
 	while (1)
 	{
 		constant_prompt();
-		exe_command(command);
 		process_input(command, sizeof(command));
+		exe_command(command);
 	}
 	return (0);
 }

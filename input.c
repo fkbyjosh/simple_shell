@@ -2,7 +2,7 @@
 
 /**
  * process_input - processes command input from user
- * @outputxt: command input from user
+ * @command: command input from user
  * @size: size of the command input
  */
 
@@ -14,16 +14,31 @@ void process_input(char *command, size_t size)
 
 	if (chars_read == -1)
 	{
-		if (feof(stdin))
+		free(command);
+
+		command = NULL;
+
+		_printf('\0');
+		exit(EXIT_FAILURE);
+	}
+	rmv_newline(command);
+	_printf(command);
+}
+
+/**
+ * rmv_newline - removes newline character
+ * @str: pointer to string
+ */
+
+void rmv_newline(char *str)
+{
+	while (*str != '\0')
+	{
+		if (*str == '\n')
 		{
-			_printf("\n");
-			exit(EXIT_SUCCESS);
+			*str = '\0';
+			return;
 		}
-		else
-		{
-			_printf("Error while reading input\n");
-			exit(EXIT_FAILURE);
-		}
-		command[strcspn(command, "\n")] = '\0';
+		str++;
 	}
 }
