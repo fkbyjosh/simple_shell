@@ -2,7 +2,7 @@
 
 /**
  * exe_command - executes the command inputted
- * @outputxt: command from user
+ * @command: command from user
  */
 
 void exe_command(const char *command)

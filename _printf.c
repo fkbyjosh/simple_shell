@@ -2,7 +2,7 @@
 
 /**
  * _printf - prints characters
- * @outputxt: text printed to the standard ouptut
+ * @command: text printed to the standard ouptut
  */
 
 void _printf(const char *command)
