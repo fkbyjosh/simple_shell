@@ -17,8 +17,35 @@ void _printf(const char *command);
 void exe_command(const char *command);
 void process_input(char *command, size_t size);
 void rmv_newline(char *str);
-
+char **strtow(char *str, char *d)
+char **strtow2(char *str, char d);;
 extern char **environ;
+char *_strcpy(char *dest, char *src);
+char *_strdup(const char *str);
+void _puts(char *str);
+int _putchar(char c);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *starts_with(const char *haystack, const char *needle);
+char *_strcat(char *dest, char *src);
+int is_cmd(info_t *info, char *path);
+char *dup_chars(char *pathstr, int start, int stop);
+char *find_path(info_t *info, char *pathstr, char *cmd);
+char *_memset(char *s, char b, unsigned int n);
+void ffree(char **pp);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+size_t list_len(const list_t *h);
+char **list_to_strings(list_t *head);
+size_t print_list(const list_t *h);
+list_t *node_starts_with(list_t *node, char *prefix, char c);
+ssize_t get_node_index(list_t *head, list_t *node);
+void free_list(list_t **head_ptr);
+int delete_node_at_index(list_t **head, unsigned int index);
+size_t print_list_str(const list_t *h);
+list_t *add_node_end(list_t **head, const char *str, int num);
+list_t *add_node(list_t **head, const char *str, int num);
+
+
 
 
 /**
