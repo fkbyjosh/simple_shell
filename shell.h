@@ -202,7 +202,6 @@ char **get_environ(info_t *);
 int _unsetenv(info_t *, char *);
 int _setenv(info_t *, char *, char *);
 
-<<<<<<< HEAD
 /* getinfo.c */
 void clear_info(info_t *);
 void set_info(info_t *, char **);
@@ -225,20 +224,15 @@ void fork_cmd(info_t *);
 int bfree(void **);
 
 /* history.c */
-=======
+
 /* toem_history.c */
->>>>>>> d9e71772cb0dea85c56a70b0280e139f10e9f9bc
+
 char *get_history_file(info_t *info);
 int write_history(info_t *info);
 int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
-<<<<<<< HEAD
-
-
-#endif /* SHELL_H */
-=======
 /* toem_lists.c */
 list_t *add_node(list_t **, const char *, int);
 list_t *add_node_end(list_t **, const char *, int);
@@ -261,4 +255,3 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
->>>>>>> d9e71772cb0dea85c56a70b0280e139f10e9f9bc
