@@ -24,7 +24,7 @@ char *get_history_file(info_t *info)
 }
 
 /**
- * write_history - a function that creates a file, or appends to an existing file
+ * write_history - creates a file or appends to an existing file
  * @info: the parameter struct
  * Return: 1 on success, else -1
  */
@@ -122,7 +122,7 @@ int build_history_list(info_t *info, char *buf, int linecount)
 }
 
 /**
- * renumber_history - a function that renumbers the history linked list after changes
+ * renumber_history - renumbers the history linked list after changes
  * @info: struct contains potential arg.
  * Return: the new hist-count
  */
